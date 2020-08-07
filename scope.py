@@ -35,11 +35,9 @@ def search_ns_shell(name, dict):
 def add_ns(name, parent, dick):
     path = search_ns_shell(parent, glob)
     path.reverse()
-    
-   # if len(path)!=0:
+   
     path.append(parent)
 
-   # print(path)
     os = dick
 
     for i in path:
@@ -49,8 +47,7 @@ def add_ns(name, parent, dick):
 def add_var(name, parent, dick):
     path = search_ns_shell(parent, glob) 
     path.reverse()
-    
-    #if len(path)!=0:
+ 
     path.append(parent)
         
     os = dick
@@ -76,11 +73,6 @@ def get_ns(name, parent, dick):
         names.append(i)
     links.append(os)
 
-    #print(links,len(links),sep='||||||')
-    #print('__________')
-    #print(names,len(names),sep='||||||')
-
-        
     for s in range(len(links)-1,0,-1):
        # print(name, links[s])
         if name in links[s]:
